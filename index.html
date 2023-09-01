@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,16 +12,16 @@
 		<meta name="theme-color" id="theme-meta" content="#222233" />
 	</head>
 	<body>
-		<button id="menubtn" title="Open Settings"></button>
+		<button id="menubtn" title="打开设置"></button>
 		<div id="taskswitcher">
-			<button id="statbtn" title="View Statistics">
+			<button id="statbtn" title="查看统计信息">
 				<span id="statline1"></span>
 				<span id="statline2"></span>
 				<span id="statline3"></span>
 			</button>
-			<select name="task" id="task-select" title="Switch Task"></select>
+			<select name="task" id="task-select" title="选择任务"></select>
 			<div id="no-task-title" title="No Task Found">Tomodoro</div>
-			<button id="managetaskbtn" title="Manage Task">
+			<button id="managetaskbtn" title="管理任务">
 				<svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
 					<path
 						d="M6 34.5V42h7.5l22.13-22.13-7.5-7.5L6 34.5zm35.41-20.41c.78-.78.78-2.05 0-2.83l-4.67-4.67c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"
@@ -29,7 +29,7 @@
 				</svg>
 			</button>
 		</div>
-		<button id="popupbtn" title="Toggle PIP Mode">
+		<button id="popupbtn" title="切换画中画模式">
 			<svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
 				<path
 					d="M38 14H22v12h16V14zm4-8H6c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 3.96 4 3.96h36c2.21 0 4-1.76 4-3.96V10c0-2.21-1.79-4-4-4zm0 32.03H6V9.97h36v28.06z"
@@ -45,9 +45,9 @@
 				<div id="time"></div>
 
 				<div id="status">
-					<span id="s-focus">FOCUS</span>
-					<span id="s-short">SHORT BREAK</span>
-					<span id="s-long">LONG BREAK</span>
+					<span id="s-focus">专注</span>
+					<span id="s-short">短休息</span>
+					<span id="s-long">长休息</span>
 				</div>
 				<button id="pauseplay" class="paused" title="Start Timer">
 					<svg id="playing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
@@ -62,13 +62,13 @@
 					</svg>
 				</button>
 			</div>
-			<button id="resetround" title="Reset Current Timer">
+			<button id="resetround" title="重置当前定时器">
 				<svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
 					<path d="M12 12h4v24h-4zm7 12l17 12V12z" />
 				</svg>
 			</button>
-			<div id="roundno" title="Number of Focus Rounds"></div>
-			<button id="next" title="Next Round">
+			<div id="roundno" title="专注回合数"></div>
+			<button id="next" title="下一回合">
 				<svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
 					<path d="M12 36l17-12-17-12v24zm20-24v24h4V12h-4z" />
 				</svg>
@@ -78,168 +78,168 @@
 			<div class="menu-title">Tomodoro</div>
 			<div class="content">
 				<section class="section">
-					<h2>Timer</h2>
+					<h2>计时器</h2>
 					<div class="setting">
-						<label for="focus-input">Focus: <span></span></label>
+						<label for="focus-input">专注时间: <span></span></label>
 						<div class="input-holder">
 							<button class="ibtn" id="focus-dec">-</button>
 							<input type="number" name="focus-input" id="focus-input" min="1" max="180" />
 							<button class="ibtn" id="focus-inc">+</button>
-							minutes
+							分钟
 						</div>
 					</div>
 					<div class="setting">
-						<label for="short-input">Short Break: <span></span></label>
+						<label for="short-input">短休息时间: <span></span></label>
 						<div class="input-holder">
 							<button class="ibtn" id="short-dec">-</button>
 							<input type="number" name="short-input" id="short-input" min="1" max="180" />
 							<button class="ibtn" id="short-inc">+</button>
-							minutes
+							分钟
 						</div>
 					</div>
 					<div class="setting">
-						<label for="long-input">Long Break: <span></span></label>
+						<label for="long-input">长休息时间: <span></span></label>
 						<div class="input-holder">
 							<button class="ibtn" id="long-dec">-</button>
 							<input type="number" name="long-input" id="long-input" min="1" max="180" />
 							<button class="ibtn" id="long-inc">+</button>
-							minutes
+							分钟
 						</div>
 					</div>
 					<div class="setting">
-						<label for="rounds-input">Rounds</label>
+						<label for="rounds-input">回合数</label>
 						<br />
-						Number of focus sessions between long breaks.
+						专注时间和长休息之间的工作回合数。
 						<div class="input-holder">
 							<button class="ibtn" id="rounds-dec">-</button>
 							<input type="number" name="rounds-input" id="rounds-input" min="1" max="18" />
 							<button class="ibtn" id="rounds-inc">+</button>
-							rounds
+							回合
 						</div>
 					</div>
 				</section>
 				<section class="section">
-					<h2>Appearance</h2>
+<h2>外观</h2>
 					<div class="setting">
-						<label for="theme">Theme:</label>
-						<select name="theme" id="theme-select" title="Theme">
-							<option value="dark" id="t-dark" selected>Dark</option>
-							<option value="black" id="t-black">Black</option>
-							<option value="light" id="t-light">Light</option>
-							<option value="white" id="t-white">White</option>
+						<label for="theme">主题:</label>
+						<select name="theme" id="theme-select" title="主题">
+							<option value="dark" id="t-dark" selected>暗色</option>
+							<option value="black" id="t-black">黑色</option>
+							<option value="light" id="t-light">亮色</option>
+							<option value="white" id="t-white">白色</option>
 						</select>
 					</div>
 					<div class="setting" id="accents">
-						<h3>Accent Color:</h3>
+						<h3>强调颜色:</h3>
 						<div id="colors"></div>
 					</div>
 				</section>
 				<section class="section">
-					<h2>Sounds & Notifications</h2>
+					<h2>声音和通知</h2>
 					<div class="setting">
-						<label for="notif">Notifications:</label>
-						<select name="notif" id="notif-select" title="Notification Type">
-							<option value="enabled">Enabled</option>
-							<option value="silent">Silent</option>
-							<option value="disabled">Disabled</option>
+						<label for="notif">通知:</label>
+						<select name="notif" id="notif-select" title="通知类型">
+							<option value="enabled">启用</option>
+							<option value="silent">静音</option>
+							<option value="disabled">禁用</option>
 						</select>
 						<br /><br />
-						Make sure that your browser allows notifications from this site.
+						请确保您的浏览器允许此站点发送通知。
 					</div>
 					<div class="setting">
-						<label for="notif">White Noise:</label>
-						<select name="notif" id="audio-select" title="Notification Type">
-							<option value="disabled" selected>Disabled</option>
-							<option value="noise">Enabled</option>
+						<label for="notif">白噪声:</label>
+						<select name="notif" id="audio-select" title="通知类型">
+							<option value="disabled" selected>禁用</option>
+							<option value="noise">启用</option>
 						</select>
 						<br /><br />
-						If enabled, white noise will be played during focus sessions. Make sure that your browser allows sound from this site.
+						如果启用，将在专注时间内播放白噪声。请确保您的浏览器允许此站点播放声音。
 					</div>
 				</section>
 				<section class="section">
-					<h2>Backup and Restore</h2>
-					<button id="create-backup" class="hover-shadow">Create Backup</button>
-					<label for="backup-restore" id="backup-restore-label" class="hover-shadow"><input type="file" accept=".json" id="backup-restore">Restore Backup</label>
+					<h2>备份和恢复</h2>
+					<button id="create-backup" class="hover-shadow">创建备份</button>
+					<label for="backup-restore" id="backup-restore-label" class="hover-shadow"><input type="file" accept=".json" id="backup-restore">恢复备份</label>
 				</section>
 				<section class="section">
-					<h2>About Tomodoro</h2>
+					<h2>关于 Tomodoro</h2>
 					<div id="about-desc">
-						Tomodoro is an open source pomodoro web app with features like offline support and PIP mode.
+						Tomodoro 是一个开源的番茄钟 Web 应用程序，具有离线支持和画中画模式等功能。
 					</div>
 					<a href="https://github.com/lazy-guy/tomodoro" id="github-link" target="_blank" class="button-link hover-shadow">
 						<img alt="GitHub" src="./GitHub-Mark-64px.png" />
-						View on GitHub
+						原项目地址
 					</a>
-					<a href='https://ko-fi.com/Z8Z6E84CZ' target='_blank' id="kofi-link">
-						<img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=3' alt='Buy Me a Coffee at ko-fi.com' />
+					<a href="https://github.com/aristorechina/Tomodoro_Chinese" id="github-link" target="_blank" class="button-link hover-shadow">
+						<img alt="GitHub" src="./GitHub-Mark-64px.png" />
+						项目开源地址
+					</a>
+					<a href="https://space.bilibili.com/283733002" id="github-link" target="_blank" class="button-link hover-shadow">
+						<img alt="GitHub" src="https://www.bilibili.com/favicon.ico?v=1" />
+						关注汉化作者
 					</a>
 				</section>
 				<section class="section">
-					<h2>About PIP mode</h2>
-					Tomodoro supports Always on Top mode, or Picture-In-Picture mode, right in the browser, without
-					having to install any electron app.<br />
-					PIP mode is supported on Chromium based browsers(Tested on Chrome and Edge).<br />
-					Safari not tested (yet) but might work.<br />
-					On desktop Firefox, PIP button will only make the video visible but will not activate PIP. To switch
-					to PIP mode, right click on the video and select "Watch in Picture-In-Picture".
+					<h2>关于画中画模式</h2>
+					Tomodoro 支持浏览器中的“始终置顶”或“画中画”模式，无需安装任何 Electron 应用程序。<br />
+					画中画模式在基于 Chromium 的浏览器上受支持（在 Chrome 和 Edge 上测试过）。<br />
+					Safari 尚未测试，但可能可用。<br />
+					在桌面版 Firefox 上，画中画按钮只会使视频可见，但不会激活画中画模式。要切换到画中画模式，请右键单击视频，然后选择“在画中画模式中观看”。
 					<br /><br /><br />
-					<h2>PIP mode on Chrome for Android</h2>
-					If you are using Chrome for Android, then the PIP button will make the video element visible. In
-					order to switch to PIP mode, make the video fullscreen and then go to your device's homescreen(by
-					pressing home button or using navigation gesture) without exiting fullscreen. PIP Mode get be
-					activated.
+					<h2>在 Android Chrome 上使用画中画模式</h2>
+					如果您正在使用 Android 版的 Chrome，那么画中画按钮将使视频元素可见。要切换到画中画模式，请将视频全屏，然后在不退出全屏模式的情况下转到设备的主屏幕（通过按主屏幕按钮或使用导航手势）。画中画模式将被激活。
 				</section>
 			</div>
 		</div>
 		<div id="statistics" class="scrollbar">
 			<div class="menu-title">
-				Statistics
-				<button id="closestats" class="crossbtn" title="Close Statistics"></button>
+				统计信息
+				<button id="closestats" class="crossbtn" title="关闭统计信息"></button>
 			</div>
 			<div class="content">
 				<div class="setting">
-					<h3>Show Statistics of:</h3>
+					<h3>显示统计信息：</h3>
 					<div id="filters" class="scrollbar">
 						<label class="task-chip">
 							<input type="checkbox" id="all" checked />
-							<span class="chip-task-name">All Tasks</span>
+							<span class="chip-task-name">所有任务</span>
 						</label>
 					</div>
 				</div>
 				<div class="setting">
-					<label for="stat-time-select">Time Period: </label>
+					<label for="stat-time-select">时间范围：</label>
 					<select id="stat-time-select">
-						<option value="1">Past Day</option>
-						<option value="7" selected>Past Week</option>
-						<option value="365">Past Year</option>
-						<option value="all">All Time</option>
+						<option value="1">最近一天</option>
+						<option value="7" selected>最近一周</option>
+						<option value="365">最近一年</option>
+						<option value="all">全部时间</option>
 					</select>
 				</div>
 				<br /><br />
-				<h2>Overview</h2>
+				<h2>概述</h2>
 				<div id="stat-summary" class="remark">
-					You focused for a total duration of
+					您总共专注了
 					<span id="stat-summary-total"></span>
-					consisting of
+					，其中包括
 					<span id="stat-summary-rounds"></span>
-					Focus Rounds with an average round duration of
+					个专注周期，平均周期持续时间为
 					<span id="stat-summary-average"></span>
 					<br /><br />
-					Shortest round duration: <span id="stat-summary-shortest"></span>
+					最短周期持续时间：<span id="stat-summary-shortest"></span>
 					<br />
-					Longest round duration: <span id="stat-summary-longest"></span>
+					最长周期持续时间：<span id="stat-summary-longest"></span>
 				</div>
-				<h2>Time Distribution:</h2>
+				<h2>时间分配：</h2>
 				<div id="pie-container">
 					<div id="pie">
 						<svg viewbox="0 0 120 120"></svg>
 					</div>
 					<div id="pie-card-container" class="scrollbar"></div>
 				</div>
-				<h2>Time Spent per Task:</h2>
+				<h2>任务耗时：</h2>
 				<div id="timespent" class="stat-chart scrollbar"></div>
 				<br /><br />
-				<h2>Time Spent per 6 Hours:</h2>
+				<h2>每六小时耗时：</h2>
 				<div id="timesixhourly" class="stat-chart scrollbar">
 					<div class="task-bar-container">
 						<div class="legend">00:00 - 06:00</div>
@@ -275,12 +275,12 @@
 					</div>
 				</div>
 				<div id="remark-hourly" class="remark">
-					You were most productive between <span class="remark-value"></span>
+					您在 <span class="remark-value"></span> 之间最为高效
 				</div>
-				<h2>Time Spent per Day:</h2>
+				<h2>每日耗时：</h2>
 				<div id="timedaily" class="stat-chart scrollbar">
 					<div class="task-bar-container">
-						<div class="legend">Monday</div>
+						<div class="legend">星期一</div>
 						<div class="bar-container">
 							<div class="bar" id="day-monday">
 								<div class="stat-value">21:11</div>
@@ -288,7 +288,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Tuesday</div>
+						<div class="legend">星期二</div>
 						<div class="bar-container">
 							<div class="bar" id="day-tuesday">
 								<div class="stat-value">21:11</div>
@@ -296,7 +296,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Wednesday</div>
+						<div class="legend">星期三</div>
 						<div class="bar-container">
 							<div class="bar" id="day-wednesday">
 								<div class="stat-value">21:11</div>
@@ -304,7 +304,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Thursday</div>
+						<div class="legend">星期四</div>
 						<div class="bar-container">
 							<div class="bar" id="day-thursday">
 								<div class="stat-value">21:11</div>
@@ -312,7 +312,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Friday</div>
+						<div class="legend">星期五</div>
 						<div class="bar-container">
 							<div class="bar" id="day-friday">
 								<div class="stat-value">21:11</div>
@@ -320,7 +320,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Saturday</div>
+						<div class="legend">星期六</div>
 						<div class="bar-container">
 							<div class="bar" id="day-saturday">
 								<div class="stat-value">21:11</div>
@@ -328,7 +328,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">Sunday</div>
+						<div class="legend">星期日</div>
 						<div class="bar-container">
 							<div class="bar" id="day-sunday">
 								<div class="stat-value">21:11</div>
@@ -337,12 +337,12 @@
 					</div>
 				</div>
 				<div id="remark-daily" class="remark">
-					You were most productive on <span class="remark-value"></span>
+					您在 <span class="remark-value"></span> 最为高效
 				</div>
-				<h2>Time Spent per Month:</h2>
+				<h2>每月耗时：</h2>
 				<div id="timemonthly" class="stat-chart scrollbar">
 					<div class="task-bar-container">
-						<div class="legend">January</div>
+						<div class="legend">一月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-january">
 								<div class="stat-value">21:11</div>
@@ -350,7 +350,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">February</div>
+						<div class="legend">二月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-february">
 								<div class="stat-value">21:11</div>
@@ -358,7 +358,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">March</div>
+						<div class="legend">三月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-march">
 								<div class="stat-value">21:11</div>
@@ -366,7 +366,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">April</div>
+						<div class="legend">四月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-april">
 								<div class="stat-value">21:11</div>
@@ -374,7 +374,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">May</div>
+						<div class="legend">五月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-may">
 								<div class="stat-value">21:11</div>
@@ -382,7 +382,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">June</div>
+						<div class="legend">六月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-june">
 								<div class="stat-value">21:11</div>
@@ -390,7 +390,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">July</div>
+						<div class="legend">七月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-july">
 								<div class="stat-value">21:11</div>
@@ -398,7 +398,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">August</div>
+						<div class="legend">八月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-august">
 								<div class="stat-value">21:11</div>
@@ -406,7 +406,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">September</div>
+						<div class="legend">九月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-september">
 								<div class="stat-value">21:11</div>
@@ -414,7 +414,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">October</div>
+						<div class="legend">十月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-october">
 								<div class="stat-value">21:11</div>
@@ -422,7 +422,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">November</div>
+						<div class="legend">十一月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-november">
 								<div class="stat-value">21:11</div>
@@ -430,7 +430,7 @@
 						</div>
 					</div>
 					<div class="task-bar-container">
-						<div class="legend">December</div>
+						<div class="legend">十二月</div>
 						<div class="bar-container">
 							<div class="bar" id="month-december">
 								<div class="stat-value">21:11</div>
@@ -439,22 +439,22 @@
 					</div>
 				</div>
 				<div id="remark-monthly" class="remark">
-					You were most productive in <span class="remark-value"></span>
+					您在 <span class="remark-value"></span> 最为高效
 				</div>
 				<details id="stat-details">
-					<summary><h2>Focus Round Records</h2></summary>
+					<summary><h2>专注时间记录</h2></summary>
 					<div id="round-entries"></div>
 				</details>
 			</div>
 		</div>
 		<div id="managetasks" class="scrollbar">
 			<div class="menu-title">
-				Tasks
-				<button id="closetasks" class="crossbtn" title="Return to main screen"></button>
+				任务
+				<button id="closetasks" class="crossbtn" title="返回主界面"></button>
 			</div>
 			<div class="content">
-				<h2>Your Tasks</h2>
-				Here you can manage your tasks.
+				<h2>您的任务</h2>
+				在这里您可以管理您的任务。
 				<br /><br />
 				<div id="task-container"></div>
 				<form id="newtask" class="task">
@@ -464,47 +464,43 @@
 						type="text"
 						min="1"
 						maxlength="25"
-						placeholder="Add New Task"
+						placeholder="添加新任务"
 					/>
-					<button type="submit" title="Create new task" class="crossbtn" id="new-task-btn"></button>
+					<button type="submit" title="创建新任务" class="crossbtn" id="new-task-btn"></button>
 				</form>
 			</div>
 		</div>
 		<div id="firstload">
 			<div id="firstloadcontent">
-				<h2>Welcome to Tomodoro!</h2>
-				Tomodoro is an open source pomodoro web app with cool features like PIP Mode, white noise, tasks,
-				statistics and offline support.
+				<h2>欢迎使用 Tomodoro！</h2>
+				Tomodoro 是一个开源的番茄钟网络应用，具有画中画模式、白噪音、任务、统计数据和离线支持等很酷的功能。
 				<br /><br /><br />
-				<h2>What's New</h2>
+				<h2>更新内容</h2>
 				<ul id="new-list">
 					<li>
-						<h3>Tasks & Statistics</h3>
+						<h3>任务和统计数据</h3>
 						<div class="whats-new-desc">
-							You can now create tasks and track the time spent focusing on these tasks. All the data is
-							stored in your browser.
+							现在您可以创建任务并跟踪在这些任务上专注的时间。所有数据都存储在您的浏览器中。
 						</div>
-					</li>
 					<li>
-						<h3>White Noise</h3>
-						<div class="whats-new-desc">You can now listen to white noise during focus rounds.</div>
+						<h3>白噪音</h3>
+						<div class="whats-new-desc">现在您可以在专注时间内听白噪音。</div>
 					</li>
 				</ul>
 				<br /><br />
-				<h2>About PIP mode</h2>
-				Tomodoro supports Always on Top mode, or Picture-In-Picture mode, right in the browser, without having
-				to install any electron app.<br />
-				PIP mode is supported on Chromium based browsers(Tested on Chrome and Edge).<br />
-				Safari not tested (yet) but might work.<br />
-				On desktop Firefox, PIP button will only make the video visible but will not activate PIP. To switch to
-				PIP mode, right click on the video and select "Watch in Picture-In-Picture".
+				<h2>关于画中画模式</h2>
+				Tomodoro 支持“始终置顶”模式或画中画模式，可以在浏览器内使用，无需安装任何桌面应用程序。<br />
+				画中画模式支持基于 Chromium 的浏览器（已在 Chrome 和 Edge 上测试）。<br />
+				Safari 尚未测试，但可能有效。<br />
+				在桌面版 Firefox 中，画中画按钮只会使视频可见，但不会激活画中画模式。要切换到画中画模式，请右键单击视频，然后选择“在画中画模式中观看”。
 				<br /><br /><br />
-				<h2>PIP mode on Chrome for Android</h2>
-				If you are using Chrome for Android, then the PIP button will make the video element visible. In order
-				to switch to PIP mode, make the video fullscreen and then go to your device's homescreen(by pressing
-				home button or using navigation gesture) without exiting fullscreen. PIP Mode get be activated.
+				<h2>Chrome for Android 上的画中画模式</h2>
+				如果您正在使用 Chrome for Android，则画中画按钮将使视频元素可见。为了切换到画中画模式，请将视频全屏，然后在不退出全屏的情况下切换到设备的主屏幕（通过按 home 按钮或使用导航手势）。画中画模式将被激活。
+				<br /><br /><br />
+				<h2>关于</h2>
+				本项目由<a href="https://space.bilibili.com/283733002">Aristore</a>汉化并在<a href="https://github.com/aristorechina/Tomodoro_Chinese">Github</a>开源。<a href="https://github.com/lazy-guy/tomodoro">原项目地址在此</a>
 			</div>
-			<button id="closeintro" class="hover-shadow">Let's Get Started!</button>
+			<button id="closeintro" class="hover-shadow">让我们开始吧！</button>
 		</div>
 		<script src="./index.js"></script>
 	</body>

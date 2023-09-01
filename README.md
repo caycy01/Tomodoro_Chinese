@@ -1,48 +1,57 @@
-# Tomodoro
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z6E84CZ)&nbsp;
-<a href="https://www.producthunt.com/posts/tomodoro?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-tomodoro" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=355079&theme=light" alt="Tomodoro - Simple&#0032;Pomodoro&#0032;timer&#0032;for&#0032;the&#0032;web | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+# Tomodoro_Chinese
 
-A pomodoro web app with PIP mode, white noise generation, tasks and more!
+一款带有画中画模式、白噪声生成、任务等功能的番茄钟 Web 应用！
 
 ![Screenshot](https://lazy-guy.github.io/tomodoro/screenshot.png)
 
-## Features:
 
--   Clean UI
--   PIP Mode
--   Tasks and Statistics
--   White Noise
--   Themes
--   Works Offline
+## 特点：
 
-## Tasks and Statistics
+-   清爽的用户界面
+-   画中画模式
+-   任务和统计数据
+-   白噪声
+-   多种主题
+-   离线可用
+
+
+## 任务和统计数据
 
 ![Statistics](https://lazy-guy.github.io/tomodoro/statistics.png)
 
-Tomodoro allows the creation of "Tasks". Time spent in a focus session can be dedicated to a task in order to generate statistics.
-All the data is saved in your browser. Taking frequent backups is recommended. Backup and restore options are available in Tomodoro's settings.
+Tomodoro 允许创建“任务”。在专注会话中花费的时间可以用来完成任务，以生成统计数据。所有数据都保存在浏览器中。建议频繁备份。Tomodoro 的设置中提供了备份和还原选项。
 
-## About Always On Top/PIP Mode
+
+## 关于始终置顶 / 画中画模式
 
 ![PIP Demo](https://lazy-guy.github.io/tomodoro/pip.png)
 
-**Not tested on Safari but might work**
+**未在 Safari 上测试，但可能可行**
 
-PIP mode works by drawing on a canvas, capturing its stream and using it as source of a video element. Then it requests Picture-In-Picture.
+画中画模式通过在画布上绘图，捕获其流并将其用作视频元素的来源来工作。然后它请求 Picture-In-Picture。
 
-On desktop Firefox, PIP button will only make the video visible but will not activate PIP. To switch to PIP mode, right click on the video and select "Watch in Picture-In-Picture".
+在桌面 Firefox 上，画中画按钮只会使视频可见，但不会激活画中画。要切换到画中画模式，请右键单击视频并选择“在画中画中观看”。
 
-On Android browsers, like Chrome for Android which does not support the Picture-In-Picture API, in order to switch to PIP mode, make the video fullscreen and then go to your device's homescreen without exiting fullscreen. If your browser is supported then PIP mode will be activated.
-
-## To-Do
-
--   Make code cleaner
--   Add custom theming
+在安卓浏览器中，例如不支持 Picture-In-Picture API 的 Chrome for Android 中，要切换到画中画模式，请将视频全屏，然后在不退出全屏的情况下转到设备的主屏幕。如果您的浏览器受支持，则会激活画中画模式。
 
 
-## Credits
-Icons from [Material Icons](https://developers.google.com/fonts/docs/material_icons)
+## To-Do (注:本汉化项目将不再更新。)
+
+-   使代码更简洁
+-   添加自定义主题
+
+
+## 鸣谢
+
+原项目是 [lazy-guy/tomodoro](https://github.com/lazy-guy/tomodoro)
+
+图标来自 [Material Icons](https://developers.google.com/fonts/docs/material_icons)
+
+字体来自 [得意黑](https://github.com/atelier-anchor/smiley-sans)
+
+汉化作者 [Aristore](https://space.bilibili.com/283733002)
 
 
 ## License
+
 [MIT](LICENSE.md)

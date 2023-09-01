@@ -33,9 +33,9 @@ let colorsDiv = document.getElementById("colors");
 let pipActive = false;
 
 const fullname = {
-	focus: "Focus",
-	short: "Short Break",
-	long: "Long Break",
+	focus: "专注",
+	short: "短休息",
+	long: "长休息",
 };
 
 let viewState = "timer";
@@ -590,12 +590,12 @@ document.getElementById("backup-restore").addEventListener("change", function ()
 				noTaskManager();
 				console.log(rec, tasks);
 				let tr = db.transaction("records", "readwrite");
-				tr.oncomplete = () => alert("Backup restored successfully!");
+				tr.oncomplete = () => alert("备份恢复成功！");
 				let objstore = tr.objectStore("records");
 				rec.forEach((r) => objstore.add(r));
 			} catch (error) {
 				console.log(error);
-				alert("An error occured! Make sure that you are restoring a valid backup file.");
+				alert("发生错误！确保您正在还原有效的备份文件。");
 			}
 		});
 	}
@@ -668,9 +668,9 @@ function createTaskEl(task) {
 	tdel.title = "Delete this task";
 	tdel.addEventListener("click", () => {
 		let p = confirm(
-			'Are you sure you want to delete the task "' +
+			'是否确实要删除任务 "' +
 				task +
-				'"? All the data related to this task will be deleted.'
+				'"？与此任务相关的所有数据都将被删除。'
 		);
 		if (!p) return;
 		tasks.splice(tasks.indexOf(task), 1);
@@ -747,12 +747,12 @@ document.getElementById("newtask").addEventListener("submit", function (ev) {
 	let formdata = new FormData(this);
 	let tname = formdata.get("taskname").trim();
 	if (tname === "") {
-		alert("Please Enter a Valid Name!");
+		alert("请输入有效名称！");
 		this.reset();
 		return;
 	}
 	if (tasks.includes(tname)) {
-		alert("Task already exists!");
+		alert("任务已存在！");
 		return;
 	}
 	tasks.push(tname);
@@ -785,7 +785,7 @@ function pieCardGenerator(task) {
 	el.appendChild(pieName);
 	let timeHolder = document.createElement("div");
 	let text = document.createElement("span");
-	text.innerText = "Time Spent: ";
+	text.innerText = "花费的时间：";
 	let timeSpan = document.createElement("span");
 	timeSpan.className = "pie-card-time";
 	let ee = document.createElement("div");
@@ -797,7 +797,7 @@ function pieCardGenerator(task) {
 	roundno.className = "pie-card-rounds";
 	let roundnospan = document.createElement("span");
 	roundnospan.className = "pie-card-rounds-span";
-	roundno.append(document.createTextNode("Number of Rounds: "), roundnospan);
+	roundno.append(document.createTextNode("回合数："), roundnospan);
 	timeHolder.append(text, timeSpan, ee, roundno);
 	el.appendChild(timeHolder);
 	return el;
