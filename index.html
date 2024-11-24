@@ -38,28 +38,19 @@
 		</button>
 		<main id="main">
 			<div id="timer" class="t-focus">
-				<svg id="ring" viewbox="0 0 100 100">
-					<circle id="secondary" cx="50" cy="50" r="48" fill="none" />
-					<circle id="progress" cx="50" cy="50" r="48" fill="none" pathlength="100" />
-				</svg>
-				<div id="time"></div>
-
 				<div id="status">
 					<span id="s-focus">专注</span>
 					<span id="s-short">短休息</span>
 					<span id="s-long">长休息</span>
 				</div>
+				<svg id="ring" viewbox="0 0 100 100">
+					<circle id="progress" cx="" cy="" r="" fill="none" pathlength="0" />
+				</svg>
+				<div id="time"></div>
+
 				<button id="pauseplay" class="paused" title="Start Timer">
-					<svg id="playing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-						<path
-							d="M18 32h4V16h-4v16zm6-28C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16zm2-8h4V16h-4v16z"
-						/>
-					</svg>
-					<svg id="paused" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-						<path
-							d="M20 33l12-9-12-9v18zm4-29C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z"
-						/>
-					</svg>
+					<a id="playing">Stop</a>
+					<a id="paused">Start</a>
 				</button>
 			</div>
 			<button id="resetround" title="重置当前定时器">
@@ -166,11 +157,16 @@
 					<div id="about-desc">
 						Tomodoro 是一个开源的番茄钟 Web 应用程序，具有离线支持和画中画模式等功能。
 					</div>
-					<a href="https://github.com/lazy-guy/tomodoro" id="github-link" target="_blank" class="button-link hover-shadow">
+					<a 
+					href="https://github.com/lazy-guy/tomodoro" 
+					id="github-link" 
+					target="_blank" 
+					class="button-link hover-shadow"
+					>
 						<img alt="GitHub" src="./GitHub-Mark-64px.png" />
 						原项目地址
 					</a>
-					<a href="https://github.com/aristorechina/Tomodoro_Chinese" id="github-link" target="_blank" class="button-link hover-shadow">
+					<a href="https://github.com/caycy01/Tomodoro_Chinese/" id="github-link" target="_blank" class="button-link hover-shadow">
 						<img alt="GitHub" src="./GitHub-Mark-64px.png" />
 						项目开源地址
 					</a>
