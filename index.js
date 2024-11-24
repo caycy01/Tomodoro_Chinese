@@ -299,7 +299,7 @@ function initNoise() {
 	noiseSource.buffer = buffer;
 
 	gain = audioCtx.createGain();
-	gain.gain = 0.5;
+	gain.gain = 0.6;
 
 	noiseSource.connect(gain);
 	gain.connect(audioCtx.destination);
@@ -1512,7 +1512,7 @@ function loop() {
 	ctx.stroke();
 }
 
-if ('documentPictureInPicture' in window) {
+if ("documentPictureInPicture" in window) {
 	let timerContainer = null;
 	let pipWindow = null;
 
@@ -1529,6 +1529,25 @@ if ('documentPictureInPicture' in window) {
 
 		pipWindow = await documentPictureInPicture.requestWindow(pipOptions);
 
+		// Copy style sheets over from the initial document
+		// so that the player looks the same.
+		[...document.styleSheets].forEach((styleSheet) => {
+			try {
+				const cssRules = [...styleSheet.cssRules].map((rule) => rule.cssText).join("");
+				const style = document.createElement("style");
+
+				style.textContent = cssRules;
+				pipWindow.document.head.appendChild(style);
+			} catch (e) {
+				const link = document.createElement("link");
+
+				link.rel = "stylesheet";
+				link.type = styleSheet.type;
+				link.media = styleSheet.media;
+				link.href = styleSheet.href;
+				pipWindow.document.head.appendChild(link);
+			}
+		});
 		// Add timer to the PiP window.
 		pipWindow.document.body.append(timer);
 
