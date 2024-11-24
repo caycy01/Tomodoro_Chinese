@@ -34,8 +34,9 @@ Tomodoro 允许创建“任务”。在专注会话中花费的时间可以用�
 
 在安卓浏览器中，例如不支持 Picture-In-Picture API 的 Chrome for Android 中，要切换到画中画模式，请将视频全屏，然后在不退出全屏的情况下转到设备的主屏幕。如果您的浏览器受支持，则会激活画中画模式。
 
+已修复本项目上游的画中画bug
 
-## To-Do (注:本汉化项目将不再更新。)
+## To-Do (注:本项目仅作为个人使用,不更新,除非我遇到了什么bug。)
 
 -   使代码更简洁
 -   添加自定义主题
@@ -46,8 +47,6 @@ Tomodoro 允许创建“任务”。在专注会话中花费的时间可以用�
 原项目是 [lazy-guy/tomodoro](https://github.com/lazy-guy/tomodoro)
 
 图标来自 [Material Icons](https://developers.google.com/fonts/docs/material_icons)
-
-字体来自 [得意黑](https://github.com/atelier-anchor/smiley-sans)
 
 汉化作者 [Aristore](https://space.bilibili.com/283733002)
 
